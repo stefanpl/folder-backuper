@@ -12,13 +12,16 @@ const targetFolder = process.env.TARGET_FOLDER || "/doesnotexist";
 // This makes sure the folders exist
 await Promise.all([stat(sourceFolder), stat(targetFolder)]);
 
-// One-liner for current directory
-chokidar.watch(sourceFolder).on("change", async (event, path) => {
+const doCopy = async () => {
   const targetFolderName = dayjs().format("YYYY-MM-DD___HH_mm_ss");
   const targetFolderFull = join(targetFolder, targetFolderName);
 
   await cp(sourceFolder, targetFolderFull, { recursive: true });
   console.log(`Copied files to ${targetFolderFull}`);
-});
+};
+
+// One-liner for current directory
+chokidar.watch(sourceFolder).on("change", doCopy);
+chokidar.watch(sourceFolder).on("add", doCopy);
 
 export {};
