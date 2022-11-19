@@ -6,11 +6,12 @@
   "main": "index.js",
   "scripts": {
     "typecheck": "npx tsc --noEmit",
+    "watch": "npx tsc --watch",
+    "compile": "npx tsc ",
     "lint-base": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint": "npm run lint-base -- --max-warnings 0",
     "lint-fix": "npm run lint-base -- --fix",
     "full-check": "npm run typecheck && npm run lint && echo \"✅ All good!\"",
-    "watch": "npx tsc --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
