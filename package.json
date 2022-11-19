@@ -1,6 +1,7 @@
 {
   "name": "sieder-setters-backup",
   "version": "1.0.0",
+  "type": "module",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -16,9 +17,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/fs-extra": "^9.0.13",
     "@types/node": "^18.11.9",
     "chokidar": "^3.5.3",
+    "dayjs": "^1.11.6",
     "dotenv": "^16.0.3",
+    "fs-extra": "^10.1.0",
     "ilc": "^0.0.1",
     "typescript": "^4.9.3"
   }
