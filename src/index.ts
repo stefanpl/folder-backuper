@@ -20,8 +20,15 @@ const doCopy = async () => {
   console.log(`Copied files to ${targetFolderFull}`);
 };
 
-// One-liner for current directory
-chokidar.watch(sourceFolder).on("change", doCopy);
-chokidar.watch(sourceFolder).on("add", doCopy);
+const tryCopy = async () => {
+  try {
+    await doCopy();
+  } catch (err) {
+    console.warn(`Failed to copy`);
+  }
+};
+
+chokidar.watch(sourceFolder).on("change", tryCopy);
+chokidar.watch(sourceFolder).on("", tryCopy);
 
 export {};
