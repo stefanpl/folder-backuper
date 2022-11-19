@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "noUncheckedIndexedAccess": false,
+    "outDir": "dist",
+    "sourceMap": true,
+    "target": "esnext",
+    "baseUrl": "./",
+    "moduleResolution": "Node16",
+    "module": "nodenext"
+  },
+  "include": ["src/**/*.ts", "src/**/.*.ts", ".*.cjs"],
+  "exclude": ["src/generated/api/**/*.ts", "src/blueprint-project/**.ts"]
+}

@@ -1,0 +1,151 @@
+{
+  "folders": [
+    {
+      "name": "vapp-creator",
+      "path": ".."
+    }
+  ],
+  "settings": {
+    "workbench.colorCustomizations": {
+      "activityBar.background": "#941e00",
+      "activityBar.foreground": "#fff",
+      "activityBar.inactiveForeground": "#aaaaaa"
+    },
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.useTabStops": false,
+    "html.format.endWithNewline": true,
+    "less.validate": false,
+    "scss.validate": true,
+    "[docker]": {
+      "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    },
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true,
+      "source.addMissingImports": true,
+      "source.organizeImports": true
+    },
+    "eslint.rules.customizations": [
+      {
+        "rule": "react/jsx-newline",
+        "severity": "off"
+      },
+      {
+        "rule": "react/self-closing-comp",
+        "severity": "off"
+      }
+    ],
+    "eslint.validate": [
+      "javascript",
+      "javascriptreact",
+      "typescript",
+      "typescriptreact"
+    ],
+    "eslint.workingDirectories": ["./frontend", "./app-renderer"],
+    "files.associations": {
+      ".env.tpl.ts": "typescript",
+      "Dockerfile-*": "dockerfile",
+      "*.tpl.ts": "typescript",
+      "docker-compose.*": "dockercompose",
+      ".pylintrc": "ini",
+      "schemaspy.properties*": "shellscript",
+      "*json.example": "json",
+      "*.env.example": "env",
+      "*.js.example": "javascript"
+    },
+    "search.useIgnoreFiles": false,
+    "search.useGlobalIgnoreFiles": false,
+    "search.exclude": {
+      "**/node_modules": true,
+      "**/package-lock.json": true,
+      "**/tsconfig.tsbuildinfo": true,
+      "**/.next": true,
+      "**/apps": true,
+      "**/dist": true,
+      "**/.cache": true,
+      "**/.venv": true,
+      "**/builds": true,
+      "**/build": true,
+      "**/tags": true,
+      "**/*.db": true,
+      "**/coverage": true,
+      "data/schema-spy/": true,
+      ".vscode/tags": true,
+      "**/*.log*": true,
+      "**/*.log": true
+    },
+    "typescript.preferences.importModuleSpecifier": "relative",
+    "git.ignoreLimitWarning": true,
+    "thunder-client.workspaceRelativePath": ".vscode",
+    "files.exclude": {
+      "**/__pycache__": true,
+      "**/.mypy_cache": true,
+      "**/.pytest_cache": true
+    },
+    "files.watcherExclude": {
+      "**/.git/objects/**": true,
+      "**/.git/subtree-cache/**": true,
+      "**/node_modules/*/**": true,
+      "**/__pycache__/*/**": true,
+      "**/.mypy_cache/*/**": true,
+      "**/.pytest_cache/*/**": true
+    },
+    "editor.rulers": [80],
+    "[python]": {
+      "editor.rulers": [88],
+      "editor.formatOnPaste": false
+    },
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.completeFunctionParens": true,
+    "python.analysis.typeCheckingMode": "basic",
+    "python.autoComplete.addBrackets": true,
+    "python.formatting.provider": "black",
+
+    "python.linting.banditEnabled": true,
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": false,
+    "python.linting.lintOnSave": true,
+    "python.linting.mypyEnabled": true,
+    // "python.linting.mypyArgs": ["--follow-imports=silent"],
+    "python.linting.pylintEnabled": true,
+    "python.autoComplete.showAdvancedMembers": true,
+    "python.formatting.blackArgs": [],
+    "python.linting.pylintArgs": [
+      "--load-plugins",
+      "pylint_django",
+      "--django-settings-module=tamoc.settings.environments.development",
+      "--rcfile",
+      "${workspaceFolder}/.pylintrc"
+    ],
+    "python.envFile": "${workspaceFolder}/.vscode/vscode.env",
+    "python.poetryPath": "~/.poetry/bin/poetry",
+    "python.terminal.activateEnvironment": true,
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "python.testing.unittestEnabled": false,
+    "python.languageServer": "Pylance",
+    "vsintellicode.python.completionsEnabled": true,
+    "python.analysis.useImportHeuristic": true,
+    "codeTemplateTool.templatesPath": "{workspace}/frontend/.vscode-templates",
+    "python.autoComplete.extraPaths": [],
+    "cSpell.dictionaries": ["en", "de"],
+    "thunder-client.saveToWorkspace": true,
+    "python.analysis.extraPaths": []
+  }
+}
