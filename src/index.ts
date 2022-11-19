@@ -12,8 +12,10 @@ const targetFolder = process.env.TARGET_FOLDER || "/doesnotexist";
 // This makes sure the folders exist
 await Promise.all([stat(sourceFolder), stat(targetFolder)]);
 
+const timestamp = () => dayjs().format("YYYY-MM-DD___HH_mm_ss");
+
 const doCopy = async () => {
-  const targetFolderName = dayjs().format("YYYY-MM-DD___HH_mm_ss");
+  const targetFolderName = timestamp();
   const targetFolderFull = join(targetFolder, targetFolderName);
 
   await cp(sourceFolder, targetFolderFull, { recursive: true });
@@ -24,11 +26,11 @@ const tryCopy = async () => {
   try {
     await doCopy();
   } catch (err) {
-    console.warn(`Failed to copy`);
+    console.warn(`Failed to copy at ${timestamp()}`);
   }
 };
 
 chokidar.watch(sourceFolder).on("change", tryCopy);
-chokidar.watch(sourceFolder).on("", tryCopy);
+chokidar.watch(sourceFolder).on("add", tryCopy);
 
 export {};
