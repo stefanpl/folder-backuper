@@ -14,7 +14,7 @@ await Promise.all([stat(sourceFolder), stat(targetFolder)]);
 
 // One-liner for current directory
 chokidar.watch(sourceFolder).on("change", async (event, path) => {
-  const targetFolderName = dayjs().format("YYYY-MM-DD___HH:mm:ss");
+  const targetFolderName = dayjs().format("YYYY-MM-DD___HH_mm_ss");
   const targetFolderFull = join(targetFolder, targetFolderName);
 
   await cp(sourceFolder, targetFolderFull, { recursive: true });
